@@ -20,7 +20,7 @@
  *     To do so, collect data from your users. Values within :colons: are (formatted) user-inputs;
  *     values within <angle brackets> have to be calculated by your software.
  *
- *     Kristina Brandstetter - 2026-03-15
+ *     You - 2026-03-05
  *******************************************************/
 
 /*
@@ -29,7 +29,7 @@
  */
 
 const LINE = "-----------------------------------------------------";
-let bmr, bmi, normal, danger;
+//let bmr, bmi, normal, danger;
 
 /**
  * Formulas:
@@ -88,24 +88,24 @@ let first = "";
 last = prompt("Last Name");
 last = last.toUpperCase();
 first = prompt("First Name");
-console.log("Name: " + last + " " + first);
+console.log("Name:                 " + last + " " + first);
 
 console.log(LINE);
 
 age = prompt("Age");
-console.log("Age: " + age + " Years");
+console.log("Age:                  " + age + " Years");
 
-height = prompt("Height (m)");
-console.log("Height: " + height + "m");
+height = prompt("Height (m) (Please use point as comma");
+console.log("Height:                " + height + "m");
 
 do {
     sex = prompt("Sex: (male/female)");
 } while (sex.toLowerCase() != "male" && sex.toLowerCase() != "female");
-console.log("Sex: " + sex);
+console.log("Sex:                   " + sex);
 height = height * 100 // --> cm for bmi
 
-weight = prompt("Weight (kg)");
-console.log("Weight: " + weight + " kg");
+weight = prompt("Weight (kg) (Please use point as comma");
+console.log("Weight:               " + weight + " kg");
 
 let bmi = (10000 * weight) / (height ** 2);
 let bmr = "";
@@ -117,8 +117,8 @@ if (sex == "female"){
     bmr = 655 + 10 * weight + 2 * height - 6 * age
 }
 
-console.log("Basal Metabolic Rate: " + bmr + " kcal");
-console.log("Body Mass Index:" + bmi);
+console.log("Basal Metabolic Rate:  " + bmr + " kcal");
+console.log("Body Mass Index:       " + bmi);
 
 let normal= "";
 let danger = "";
@@ -136,7 +136,7 @@ if(bmi < 16 && bmi > 30){
 } else {
     danger = "No"
 }
-console.log("Normal Weight: " + normal);
-console.log("Danger: " + danger);
+console.log("Normal Weight:         " + normal);
+console.log("Danger:                " + danger);
 console.log(LINE);
 
